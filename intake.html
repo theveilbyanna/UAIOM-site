@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Business Setup Form | Ultimate AI Office Master</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:#3D4A5C;font-family:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.55}
+a{color:#1F4E79}
+a:focus-visible,input:focus-visible,textarea:focus-visible,button:focus-visible{outline:3px solid #1F4E79;outline-offset:2px}
+.top{border-bottom:1px solid #DDE3EA;padding:16px 20px}
+.top a{color:#16202E;text-decoration:none;font-weight:700}
+main{max-width:680px;margin:0 auto;padding:32px 20px 56px}
+h1{color:#16202E;font-size:clamp(1.8rem,6.5vw,2.4rem);font-weight:700;line-height:1.15;margin:0 0 10px}
+h2{color:#16202E;font-size:1.2rem;font-weight:700;margin:0 0 4px}
+.intro{margin:0 0 8px}
+fieldset{border:0;border-top:1px solid #DDE3EA;margin:28px 0 0;padding:24px 0 0}
+legend{padding:0;float:left;width:100%}
+legend+*{clear:both}
+.hint{font-size:.93rem;margin:0 0 14px}
+label{display:block;font-weight:600;color:#16202E;margin:16px 0 6px}
+label span{font-weight:400;color:#51627A}
+input,textarea{width:100%;font:inherit;color:#16202E;padding:12px 14px;border:1.5px solid #C9D2DC;border-radius:8px;background:#fff}
+textarea{min-height:96px;resize:vertical}
+input:focus,textarea:focus{border-color:#1F4E79}
+.req{color:#A12D2D}
+.actions{border-top:1px solid #DDE3EA;margin-top:32px;padding-top:24px}
+button{width:100%;font:inherit;font-weight:600;font-size:1.05rem;padding:15px 22px;border-radius:8px;border:1.5px solid #1F4E79;background:#1F4E79;color:#fff;cursor:pointer}
+.fine{font-size:.9rem;margin-top:12px}
+.error{color:#A12D2D;font-weight:600;margin-top:12px}
+.done{background:#F4F6F8;border-radius:10px;padding:18px;margin-top:16px}
+.done[hidden],.error[hidden]{display:none}
+footer{border-top:1px solid #DDE3EA;padding:24px 20px;font-size:.95rem}
+</style>
+</head>
+<body>
+<header class="top"><a href="/">&larr; Ultimate AI Office Master</a></header>
+<main>
+<h1>Business setup form</h1>
+<p class="intro">This tells me how your AI assistant should answer your phone. It takes about 10 minutes. Skip anything you're not sure about and we'll cover it on a call.</p>
+<p class="intro"><span class="req">*</span> means required.</p>
+
+<form id="intake" novalidate>
+
+<fieldset>
+<legend><h2>Your business</h2></legend>
+<label for="f_business">Business name <span class="req">*</span></label>
+<input id="f_business" name="Business name" required autocomplete="organization">
+<label for="f_owner">Your name <span class="req">*</span></label>
+<input id="f_owner" name="Owner name" required autocomplete="name">
+<label for="f_cell">Your cell phone <span class="req">*</span></label>
+<input id="f_cell" name="Owner cell" type="tel" required autocomplete="tel">
+<label for="f_email">Your email</label>
+<input id="f_email" name="Owner email" type="email" autocomplete="email">
+<label for="f_line">The business phone number customers call</label>
+<input id="f_line" name="Business phone line" type="tel">
+<label for="f_web">Website <span>(if you have one)</span></label>
+<input id="f_web" name="Website" type="url" inputmode="url">
+</fieldset>
+
+<fieldset>
+<legend><h2>How the phone should be answered</h2></legend>
+<label for="f_greeting">How should it greet callers?</label>
+<input id="f_greeting" name="Greeting" placeholder="Thanks for calling Smith Plumbing, how can I help?">
+<label for="f_tone">Anything about tone? <span>(friendly, formal, short and quick...)</span></label>
+<input id="f_tone" name="Tone">
+<label for="f_spanish">Do you get calls in Spanish or another language?</label>
+<input id="f_spanish" name="Other languages">
+</fieldset>
+
+<fieldset>
+<legend><h2>Services</h2></legend>
+<label for="f_services">What services do you offer? <span class="req">*</span></label>
+<textarea id="f_services" name="Services offered" required placeholder="AC repair, furnace install, water heaters, drain cleaning..."></textarea>
+<label for="f_noservices">Anything you DON'T do? <span>(so it can turn those calls away politely)</span></label>
+<textarea id="f_noservices" name="Services NOT offered"></textarea>
+<label for="f_area">Cities or zip codes you serve <span class="req">*</span></label>
+<textarea id="f_area" name="Service area" required placeholder="Hemet, San Jacinto, Menifee, Perris..."></textarea>
+</fieldset>
+
+<fieldset>
+<legend><h2>Hours and emergencies</h2></legend>
+<label for="f_hours">Business hours <span class="req">*</span></label>
+<input id="f_hours" name="Business hours" required placeholder="Mon to Fri 7am to 5pm, Sat 8am to noon">
+<label for="f_emergency">Do you take emergency calls? What counts as an emergency?</label>
+<textarea id="f_emergency" name="Emergencies"></textarea>
+<label for="f_afterhours">What should happen to after-hours calls?</label>
+<textarea id="f_afterhours" name="After-hours handling" placeholder="Book for next morning, text me if it's an emergency..."></textarea>
+</fieldset>
+
+<fieldset>
+<legend><h2>Booking jobs</h2></legend>
+<label for="f_calendar">How do you keep your schedule now?</label>
+<input id="f_calendar" name="Current calendar" placeholder="Google Calendar, paper, Jobber, Housecall Pro...">
+<label for="f_slots">What appointment times can it offer?</label>
+<textarea id="f_slots" name="Appointment slots" placeholder="Morning 8 to 12, afternoon 12 to 4"></textarea>
+<label for="f_info">What do you need from a caller before a visit?</label>
+<textarea id="f_info" name="Info needed from callers" placeholder="Name, address, phone, what's wrong, age of the unit..."></textarea>
+</fieldset>
+
+<fieldset>
+<legend><h2>Customer questions</h2></legend>
+<p class="hint">List the questions customers ask most and how you answer them. This is what makes the assistant sound like it knows your business.</p>
+<label for="f_faq">Common questions and your answers</label>
+<textarea id="f_faq" name="Common questions and answers" style="min-height:150px" placeholder="Do you charge for estimates? / Do you offer financing? / Are you licensed?"></textarea>
+<label for="f_price">How should it handle price questions?</label>
+<textarea id="f_price" name="Price questions" placeholder="Never quote prices / Service call fee is $89 / Free estimates..."></textarea>
+</fieldset>
+
+<fieldset>
+<legend><h2>Messages</h2></legend>
+<label for="f_msgs">Where should messages and new bookings go?</label>
+<input id="f_msgs" name="Send messages to" placeholder="Text my cell, email me, or both">
+<label for="f_other">Anything else I should know?</label>
+<textarea id="f_other" name="Other notes"></textarea>
+</fieldset>
+
+<div class="actions">
+<button type="submit">Send to Anna</button>
+<p class="error" id="err" hidden role="alert"></p>
+<p class="fine">Tapping Send opens an email with your answers filled in. Just hit send in your email app.</p>
+<div class="done" id="done" hidden role="status">
+<p><strong>Your email should be open now.</strong> If nothing opened, copy your answers into an email to <a href="mailto:annahulett@ultimateaiofficemaster.com">annahulett@ultimateaiofficemaster.com</a>, or call or text <a href="tel:+19514399337">(951) 439-9337</a>.</p>
+</div>
+</div>
+</form>
+</main>
+<footer><a href="/">Home</a> &nbsp;|&nbsp; <a href="privacy.html">Privacy Policy</a></footer>
+<script>
+document.getElementById('intake').addEventListener('submit',function(e){
+  e.preventDefault();
+  var f=e.target, err=document.getElementById('err'), missing=[];
+  f.querySelectorAll('[required]').forEach(function(el){ if(!el.value.trim()) missing.push(el); });
+  if(missing.length){
+    err.textContent='Please fill in: '+missing.map(function(el){return document.querySelector('label[for="'+el.id+'"]').firstChild.textContent.trim();}).join(', ')+'.';
+    err.hidden=false; missing[0].focus(); return;
+  }
+  err.hidden=true;
+  var lines=[];
+  f.querySelectorAll('input,textarea').forEach(function(el){
+    var v=el.value.trim(); if(v) lines.push(el.name.toUpperCase()+':\n'+v+'\n');
+  });
+  var biz=document.getElementById('f_business').value.trim();
+  var href='mailto:annahulett@ultimateaiofficemaster.com'
+    +'?subject='+encodeURIComponent('Setup form: '+biz)
+    +'&body='+encodeURIComponent(lines.join('\n'));
+  window.location.href=href;
+  document.getElementById('done').hidden=false;
+});
+</script>
+</body>
+</html>
